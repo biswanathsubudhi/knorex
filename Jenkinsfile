@@ -6,7 +6,6 @@ pipeline {
               sh "docker build . -t biswanathsubudhi/project:${latestCommitid() }"
             }
         }
-
         stage('Publish Image') {
             steps {
               withCredentials([string(credentialsId: 'dockerhub', variable: 'dockerpassword')]) {
