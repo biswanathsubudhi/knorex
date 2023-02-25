@@ -1,7 +1,6 @@
+#!/usr/bin/env groovy
 pipeline {
-    agent {
-        node any
-    }
+    agent any
     stages {
         stage('Build Image') {
             when {
