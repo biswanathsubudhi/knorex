@@ -9,6 +9,9 @@ pipeline {
             when {
                 branch 'master'  //only run these steps on the master branch
             }
+            steps {
+              sh "docker build . -t biswanathsubudhi/project:${latestCommitid() }"
+            }
 
             // Jenkins Stage to Build the Docker Image
 
