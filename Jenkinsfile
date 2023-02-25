@@ -24,7 +24,7 @@ pipeline {
             steps {
               withCredentials([string(credentialsId: 'dockerhub', variable: 'dockerpassword')]) {
                 sh "docker login -u biswanathsubudhi -p ${dockerpassword}"
-                sh "docker push biswanathsubudhi/myapp:${latestCommitid() }"
+                sh "docker push biswanathsubudhi/project:${latestCommitid() }"
         }
       }
             
